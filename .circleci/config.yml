@@ -18,7 +18,8 @@ jobs:
           root: workspace
           paths:
             - output.txt
-      - run: cd /workspace
+      - run: sudo apt install mlocate
+      - run: locate output.txt
       - run: sudo apt install tree
       - run: tree
       - run: ls
