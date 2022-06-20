@@ -11,11 +11,10 @@ jobs:
     docker:
       - image: cimg/node:13.8.0
     steps:
-      - run: sudo mkdir -p /home/circleci/project/workspace
-      - run: cd workspace
       - run: sudo echo "You are working"> output.txt
       - persist_to_workspace:
-          root: /home/circleci/project/workspace
+          root: 
+            - run: pwd
           paths:
             - output.txt
   print_output_file:
