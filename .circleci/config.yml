@@ -12,8 +12,8 @@ jobs:
     environment:
       NAME: "Charles"
     steps:
-      - run: echo $NAME, "You are working on: " $CIRCLE_BRANCH > output.txt
       - run: mkdir -p workspace
+      - run: echo $NAME, "You are working on: " $CIRCLE_BRANCH > workspace/output.txt
       - persist_to_workspace:
           root: tmp/workspace
           paths:
