@@ -18,6 +18,7 @@ jobs:
           root: workspace
           paths:
             - output.txt
+      - run: pwd
   print_output_file:
     docker:
       - image: cimg/node:13.8.0
