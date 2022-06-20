@@ -14,18 +14,18 @@ jobs:
     steps:
       - run: echo $NAME, "You are working on" $CIRCLE_BRANCH
   
-  print_world:
+  amazing:
     docker:
       - image: cimg/node:13.8.0
     steps:
-      - run: echo "world"
+      - run: echo "CI/CD with CircleCi is amazing."
 
 workflows:
   # Name the workflow "hello_and_world"
   version: 2
   hello_name:
     jobs:
-      - print_hello
-      - print_world:
+      - print_name
+      - amazing:
           requires:
-            - print_hello
+            - print_name
