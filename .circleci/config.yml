@@ -23,7 +23,7 @@ jobs:
       - image: cimg/node:13.8.0
     steps:
       - attach_workspace:
-          at: workspace
+          at: /tmp/workspace
       - run: cat output.txt
 
 workflows:
