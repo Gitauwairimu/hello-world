@@ -38,7 +38,7 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
-      - run: cat orkspace/output.txt
+      - run: cat workspace/output.txt
       - run: 
           name: read_error
           command: echo "Failed to read the output file"
