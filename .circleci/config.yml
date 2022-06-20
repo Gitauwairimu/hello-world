@@ -20,6 +20,8 @@ jobs:
             - output.txt
       - run: pwd
       - run: ls
+      - run: cd workspace
+      - run: ls
   print_output_file:
     docker:
       - image: cimg/node:13.8.0
