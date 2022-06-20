@@ -24,7 +24,7 @@ jobs:
       - print_pipeline_id:
           id:
       - run: echo "Step failed, Please recheck the code." 
-          when: on_fail
+        when: on_fail
       - run: mkdir -p workspace
       - run: cd workspace
       - run: sudo echo "You are working"> workspace/output.txt
