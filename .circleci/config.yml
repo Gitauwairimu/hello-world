@@ -23,7 +23,7 @@ jobs:
 workflows:
   # Name the workflow "hello_and_world"
   version: 2
-  hello_name:
+  jobs_env_variables:
     jobs:
       - print_name
       - amazing:
