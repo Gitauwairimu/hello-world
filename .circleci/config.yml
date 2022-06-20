@@ -6,13 +6,13 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
 jobs:
-  print_hello:
+  print_name:
     docker:
       - image: cimg/node:13.8.0
     environment:
       NAME: "Charles"
     steps:
-      - run: echo $NAME, $CIRCLE_BRANCH
+      - run: echo $NAME, "You are working on" $CIRCLE_BRANCH
   
   print_world:
     docker:
@@ -23,7 +23,7 @@ jobs:
 workflows:
   # Name the workflow "hello_and_world"
   version: 2
-  hello_and_world:
+  hello_name:
     jobs:
       - print_hello
       - print_world:
