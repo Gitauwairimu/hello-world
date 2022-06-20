@@ -9,11 +9,9 @@ jobs:
   save_hello_world_output:
     docker:
       - image: cimg/node:13.8.0
-    environment:
-      NAME: "Charles"
     steps:
       - run: mkdir -p workspace
-      - run: echo $NAME, "You are working on: " $CIRCLE_BRANCH > workspace/output.txt
+      - run: echo "You are working"> workspace/output.txt
       - persist_to_workspace:
           root: tmp/workspace
           paths:
