@@ -5,7 +5,7 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
-
+working_directory: /tmp
 jobs:
   save_hello_world_output:
     docker:
@@ -23,7 +23,7 @@ jobs:
       - image: cimg/node:13.8.0
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: workspace
       - run: cat output.txt
 
 workflows:
