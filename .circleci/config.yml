@@ -18,7 +18,7 @@ jobs:
       - persist_to_workspace:
           root: workspace
           paths:
-            - output.txt
+            - tmp/workspace/output.txt
   print_output_file:
     docker:
       - image: cimg/node:13.8.0
