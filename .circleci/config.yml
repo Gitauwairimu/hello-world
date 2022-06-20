@@ -38,11 +38,10 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
-      - run: cat workspace/output.txt
-      - run: return 1
+      - run: cat orkspace/output.txt
       - run: 
-          name: on_error
-          command: echo "Failed job"
+          name: read_error
+          command: echo "Failed to read the output file"
           when: on_fail
         
 workflows:
