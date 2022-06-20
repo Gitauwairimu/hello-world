@@ -21,6 +21,7 @@ jobs:
       - run: pwd
       - run: ls
       - run: cd workspace
+      - run: pwd
       - run: ls
   print_output_file:
     docker:
