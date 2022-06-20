@@ -13,7 +13,7 @@ reference
     docker:
       - image: cimg/node:13.8.0
     steps:
-      - run: echo "hello" $NAME
+      - run: echo $NAME
   
   print_world:
     docker:
