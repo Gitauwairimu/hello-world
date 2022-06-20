@@ -9,8 +9,10 @@ jobs:
   print_hello:
     docker:
       - image: cimg/node:13.8.0
+    environment:
+      NAME: "Charles"
     steps:
-      - run: echo "hello"
+      - run: echo $NAME
   
   print_world:
     docker:
