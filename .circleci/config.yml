@@ -14,7 +14,7 @@ jobs:
     steps:
       - run: sudo mkdir -p workspace
       - run: cd workspace
-      - run: sudo echo "You are working"> output.txt
+      - run: sudo echo "You are working"> workspace/output.txt
       - persist_to_workspace:
           root: workspace
           paths:
