@@ -12,7 +12,7 @@ jobs:
     environment:
       NAME: "Charles"
     steps:
-      - run: echo $NAME
+      - run: echo $NAME, $CIRCLE_BRANCH
   
   print_world:
     docker:
