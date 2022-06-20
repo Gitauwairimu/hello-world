@@ -14,7 +14,6 @@ jobs:
       - run: sudo echo "You are working"> output.txt
       - persist_to_workspace:
           root: 
-            - run: pwd
           paths:
             - output.txt
   print_output_file:
