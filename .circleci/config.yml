@@ -14,7 +14,7 @@ jobs:
       - run: cd workspace
       - run: sudo echo "You are working"> output.txt
       - persist_to_workspace:
-          root: tmp/workspace
+          root: workspace
           paths:
             - output.txt
   print_output_file:
@@ -22,7 +22,7 @@ jobs:
       - image: cimg/node:13.8.0
     steps:
       - attach_workspace:
-          at: /workspace
+          at: workspace
       - run: cat output.txt
 
 workflows:
