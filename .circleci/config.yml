@@ -24,6 +24,7 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp/workspace
+      - run: pwd
       - run: cat workspace/output.txt
 
 workflows:
