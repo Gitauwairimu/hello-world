@@ -18,11 +18,7 @@ jobs:
           root: workspace
           paths:
             - output.txt
-      - run: cat /etc/lsb-release
-      - run: find output.txt
-      - run: sudo apt install tree
-      - run: tree
-      - run: ls
+
   print_output_file:
     docker:
       - image: cimg/node:13.8.0
