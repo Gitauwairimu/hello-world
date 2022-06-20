@@ -11,9 +11,9 @@ jobs:
     docker:
       - image: cimg/node:13.8.0
     steps:
-      - run: sudo echo "You are working"> output.txt
+      - run: sudo echo "You are working"> workspace/output.txt
       - persist_to_workspace:
-          root: 
+          root: workspace
           paths:
             - output.txt
   print_output_file:
