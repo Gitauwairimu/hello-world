@@ -15,7 +15,7 @@ jobs:
       - run: cd workspace
       - run: sudo echo "You are working"> output.txt
       - persist_to_workspace:
-          root: workspace
+          root: /home/circleci/project/workspace
           paths:
             - output.txt
   print_output_file:
