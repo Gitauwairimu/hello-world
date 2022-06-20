@@ -18,9 +18,9 @@ jobs:
           root: workspace
           paths:
             - output.txt
+      - run: cat /etc/lsb-release
       - run: sudo apt install mlocate
       - run: locate output.txt
-      - run: cat /etc/lsb-release
       - run: sudo apt install tree
       - run: tree
       - run: ls
