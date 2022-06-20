@@ -25,8 +25,8 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp/workspace
-      - run: pwd
-      - run: cat workspace/output.txt
+      - run: cd workspace
+      - run: cat output.txt
 
 workflows:
   # Name the workflow "hello_and_world"
